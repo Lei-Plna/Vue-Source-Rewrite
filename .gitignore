@@ -1,0 +1,8 @@
+# 忽略node_modules下的文件
+**/node_modules/*
+**/.idea
+**/.vscode
+**/.idea
+**/.git
+**/dist/
+**/build/
