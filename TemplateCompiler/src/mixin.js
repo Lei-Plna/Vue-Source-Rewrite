@@ -11,7 +11,7 @@ function initMixin(Vue) {
   // Vue初始化方法
   Vue.prototype._init = function (options) {
     var vm = this;
-    vm.$options = options;
+    setContentProperty(vm, '$options', options);
     initState(vm);
 
     if (options.el) {

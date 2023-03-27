@@ -1,8 +1,8 @@
 import { observe } from './observe';
-import { proxy, setContentProperty } from './shared/utils';
+import { proxy } from './shared/utils';
 
 function initState(vm) {
-  setContentProperty(vm, '$options', vm.$options);
+  const options = vm.$options;
 
   if (options.data) {
     initData(vm);
