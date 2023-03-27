@@ -1,8 +1,9 @@
 {
-  "name": "template_compiler",
+  "name": "template-compiler",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "dev": "rollup -c -w"
   },
