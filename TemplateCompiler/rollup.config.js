@@ -5,6 +5,7 @@
 import babel from 'rollup-plugin-babel';
 import serve from 'rollup-plugin-serve';
 import commonjs from 'rollup-plugin-commonjs';
+import livereload from 'rollup-plugin-livereload';
 
 export default {
   // 入口文件
@@ -34,5 +35,6 @@ export default {
       port: 3000,
       contentBase: '',
     }),
+    livereload('dist'),
   ],
 };
