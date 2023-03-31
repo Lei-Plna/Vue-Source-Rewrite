@@ -1,6 +1,7 @@
 import { setContentProperty } from './shared/utils';
 import { initState } from './state';
 import { compilerToRenderFunction } from './compiler';
+import { mountComponent } from './lifecycle';
 
 function initMixin(Vue) {
   // Vue初始化方法
@@ -26,9 +27,12 @@ function initMixin(Vue) {
       if (!template && el) {
         template = el.outerHTML;
       }
+      // 获取到生成虚拟DOM树的Render函数
       const render = compilerToRenderFunction(template);
       setContentProperty(options, 'render', render);
     }
+
+    mountComponent(vm);
   };
 }
 

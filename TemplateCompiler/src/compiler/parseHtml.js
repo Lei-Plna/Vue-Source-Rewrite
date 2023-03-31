@@ -121,6 +121,7 @@ function parseHtmlToAst(html) {
     stack.push(element);
   }
 
+  // 整理目前的元素集合解构
   function formatStructure() {
     // 从元素集合中取出最后一项 -> 最里层的子元素
     const element = stack.pop();
@@ -135,6 +136,7 @@ function parseHtmlToAst(html) {
     }
   }
 
+  // 生成抽象语法树实例
   function createAstElement(tagName, attrs) {
     return {
       type: 1,
